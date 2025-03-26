@@ -4,14 +4,14 @@ namespace XDiAMOND;
 
 class ValidateInput
 {
-    public static bool IsInputNull(string userInputString)
+    public static bool IsInputNull()
     {
-        return userInputString is null ? true : false;
+        return RequestUserInput.userInputString is null;
     }
 
-    public static bool CanItConvertToInt(string userInputString)
+    public static bool CanItConvertToInt()
     {
-        if (Int32.TryParse(userInputString, out _)){
+        if (Int32.TryParse(RequestUserInput.userInputString, out _)){
             return true;
         } else {
             return false;
