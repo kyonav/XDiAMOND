@@ -8,21 +8,33 @@ class Program
     }
 
     public static int userInputInt;
+
     public static void ApplicationStart()
     {
+        do {
         RequestUserInput.UserInput();    
         string userInputString = RequestUserInput.userInputString!;
-        
 
-        if (!ValidateInput.IsInputNull(userInputString)){
-            if (ValidateInput.CanItConvertToInt(userInputString))
+            if (!ValidateInput.IsInputNull(userInputString))
             {
-                userInputInt = ConvertInput.ConvertToInt32(userInputString);
+                if (ValidateInput.CanItConvertToInt(userInputString))
+                {
+                    userInputInt = ConvertInput.ConvertToInt32(userInputString);
+                }
+                else
+                {
+                    LogToUser.StringInputDetected();
+                    
+                    continue;
+                }
+            } else {
+               LogToUser.NullInputDetected();
+
+               continue; 
             }
-            else
-            {
-                
-            }
-        }
+
+            
+
+        } while (true);
     }
 }
