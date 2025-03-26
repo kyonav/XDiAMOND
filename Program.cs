@@ -7,23 +7,24 @@ class Program
         ApplicationStart();
     }
 
+    public static string? userInputString;
     public static int userInputInt;
 
     public static void ApplicationStart()
     {
         do {
-        RequestUserInput.UserInput();    
-        string userInputString = RequestUserInput.userInputString!;
+            RequestUserInput.UserInput();    
+            userInputString = RequestUserInput.userInputString!; 
 
-            if (!ValidateInput.IsInputNull(userInputString))
+            if (!ValidateInput.IsInputNull())
             {
-                if (ValidateInput.CanItConvertToInt(userInputString))
+                if (ValidateInput.CanItConvertToInt())
                 {
-                    userInputInt = ConvertInput.ConvertToInt32(userInputString);
+                    userInputInt = ConvertInput.ConvertToInt32();
                 }
                 else
                 {
-                    LogToUser.StringInputDetected();
+                    LogToUser.InvalidInputDetected();
                     
                     continue;
                 }
@@ -33,8 +34,17 @@ class Program
                continue; 
             }
 
-            
+            if (ValidateInput.IsUserInputOdd())
+            {
+                LogDiamond.PrintXDiamondTop();
+                LogDiamond.PrintXDiamondBottom();
+            }
+            else
+            {
+                LogToUser.InputIsEven();
 
+                continue;
+            }
         } while (true);
     }
 }
