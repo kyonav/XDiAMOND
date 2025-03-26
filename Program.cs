@@ -50,7 +50,7 @@ class Program
                 continue;
             }
 
-            do {
+            do { //
                 LogToUser.ContinueOrNot();
                 RequestUserInput.UserInput();
 
