@@ -8,6 +8,8 @@ class LogDiamond
     {
         int spaces = (ConvertInput.userInputInt / 2);
 
+        Console.WriteLine("____________________________________________");
+
         for (int lineOfDiamond = 1; lineOfDiamond <= ConvertInput.userInputInt; lineOfDiamond += 2)
         {
             for (int spacesBeforeX = 0; spacesBeforeX < spaces ; spacesBeforeX++)
