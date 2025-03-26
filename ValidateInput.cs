@@ -17,4 +17,16 @@ class ValidateInput
             return false;
         }
     }
+
+    public static bool IsUserInputOdd()
+    {
+        if (ConvertInput.userInputInt % 2 != 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
