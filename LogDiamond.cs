@@ -2,7 +2,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace XDiAMOND;
 
-class DiamondLog
+class LogDiamond
 {
     public static void PrintXDiamondTop(int userInputIntOdd)
     {
