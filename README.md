@@ -4,7 +4,7 @@
 
 ## Technologies
 
-[![Technologies](https://skillicons.dev/icons?i=git,github,cs,dotnet,vscode)](https://skillicons.dev)
+[![Technologies](https://skillicons.dev/icons?i=git,cs,dotnet,vscode)](https://skillicons.dev)
 
 ## Introduction
 
