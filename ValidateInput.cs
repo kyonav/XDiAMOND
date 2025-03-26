@@ -4,8 +4,8 @@ namespace XDiAMOND;
 
 class ValidateInput
 {
-    public static void IsInputNull()
+    public static bool IsInputNull(string userInputString)
     {
-        
+        return userInputString is null ? true : false;
     }
 }
