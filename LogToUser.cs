@@ -1,0 +1,6 @@
+namespace XDiAMOND;
+
+class LogToUser
+{
+    
+}
