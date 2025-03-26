@@ -2,8 +2,9 @@
 
 class Program
 {
-    static void Main(string[] args)
-    {
+    static void Main()
+    {   
+        Console.Clear();
         ApplicationStart();
     }
 
@@ -13,12 +14,15 @@ class Program
     public static void ApplicationStart()
     {
         do {
-            RequestUserInput.UserInput();    
-            userInputString = RequestUserInput.userInputString!; 
+            LogToUser.TypeANumber();
 
-            if (!ValidateInput.IsInputNull())
+            RequestUserInput.UserInput();
+            Console.Clear(); 
+            //userInputString = RequestUserInput.userInputString!; 
+
+            if (!InputException.IsInputNull())
             {
-                if (ValidateInput.CanItConvertToInt())
+                if (InputException.CanItConvertToInt())
                 {
                     userInputInt = ConvertInput.ConvertToInt32();
                 }
@@ -34,7 +38,7 @@ class Program
                continue; 
             }
 
-            if (ValidateInput.IsUserInputOdd())
+            if (ConditionalInput.IsUserInputOdd())
             {
                 LogDiamond.PrintXDiamondTop();
                 LogDiamond.PrintXDiamondBottom();
@@ -45,6 +49,21 @@ class Program
 
                 continue;
             }
+
+            do {
+                LogToUser.ContinueOrNot();
+                RequestUserInput.UserInput();
+
+                if (ConditionalInput.DidUserContinue())
+                {
+                    Main();
+                }
+                else
+                {
+                    LogToUser.QuittingProgram();
+                    Environment.Exit(0);
+                }
+            } while (true);
         } while (true);
     }
 }
