@@ -4,7 +4,7 @@ namespace XDiAMOND;
 
 class DiamondLog
 {
-    public static void PrintXDiamond(int userInputIntOdd)
+    public static void PrintXDiamondTop(int userInputIntOdd)
     {
         int spaces = (userInputIntOdd / 2);
 
@@ -23,6 +23,29 @@ class DiamondLog
             Console.WriteLine();
 
             spaces--;
-        } // oopsie
+        } 
+    }
+
+    public static void PrintXDiamondBottom (int userInputIntOdd){
+        
+        int spacesQtt = (userInputIntOdd / 2);
+        int oldSpacesQtt = spacesQtt;
+
+        for (int lineOfDiamond = (userInputIntOdd - 2); lineOfDiamond >= 1; lineOfDiamond -= 2)
+        {
+            for (int spacesBeforeX = spacesQtt; spacesBeforeX >= oldSpacesQtt; spacesBeforeX--)
+            {
+                Console.Write(" ");
+            }
+
+            for (int xOnLine = lineOfDiamond; xOnLine > 0; xOnLine--)
+            {
+                Console.Write('x');
+            }
+
+            Console.WriteLine();
+
+            spacesQtt++;
+        }
     }
 }
