@@ -22,4 +22,11 @@ class LogToUser
 
         Console.WriteLine($"The number {ConvertInput.userInputInt} is even. Try again with a odd number.");
     }
+
+    public static void DoYouWannaContinue()
+    {
+        Console.WriteLine();
+        Console.WriteLine("Do you wish to redraw the triangle? Y/N");
+
+    }
 }
