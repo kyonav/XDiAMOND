@@ -23,6 +23,6 @@ class DiamondLog
             Console.WriteLine();
 
             spaces--;
-        }
+        } // oopsie
     }
 }
