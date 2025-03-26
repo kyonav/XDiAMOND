@@ -2,6 +2,10 @@
 
 ![](https://i.imgur.com/Q6Sz0FT.gif)
 
+## Technologies
+
+[![Technologies](https://skillicons.dev/icons?i=git,github,cs,dotnet,vscode)](https://skillicons.dev)
+
 ## Introduction
 
 A simple but cool application where you can create a diamond shaped output.
