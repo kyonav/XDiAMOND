@@ -8,4 +8,13 @@ class ValidateInput
     {
         return userInputString is null ? true : false;
     }
+
+    public static bool CanItConvertToInt(string userInputString)
+    {
+        if (Int32.TryParse(userInputString, out _)){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
