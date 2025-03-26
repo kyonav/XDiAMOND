@@ -7,16 +7,22 @@ class Program
         ApplicationStart();
     }
 
+    public static int userInputInt;
     public static void ApplicationStart()
     {
-        string userInput = AskForUserInput.UserInput();
+        RequestUserInput.UserInput();    
+        string userInputString = RequestUserInput.userInputString!;
+        
 
-        int userInputInt = ConvertNumber.ConvertToInt(userInput);
-
-        bool IsUserInputIntOdd = IsOddOrEven.CheckIfOdd(userInputInt);
-
-        if (IsUserInputIntOdd){
-            DiamondLog.PrintXDiamond(userInputInt);
+        if (!ValidateInput.IsInputNull(userInputString)){
+            if (ValidateInput.CanItConvertToInt(userInputString))
+            {
+                userInputInt = ConvertInput.ConvertToInt32(userInputString);
+            }
+            else
+            {
+                
+            }
         }
     }
 }
