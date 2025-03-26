@@ -1,20 +1,16 @@
 # Title goes here!
 
-![]()
+![](https://i.imgur.com/Q6Sz0FT.gif)
 
 ## Introduction
 
-Project introduction.
-
-## Project
-
-Developed during the Fullstack course at [Academia do Programador](https://www.academiadoprogramador.net) 2025
+A simple but cool application where you can create a diamond shaped output.
 
 ## Features
 
-- **Feature1**: Feature1 description.
-- **Feature2**: Feature2 description. 
-- **Feature3**
+- **The diamond is completely generated according to the user input.**
+- **The app has input validation. So you can only enter valid options.** 
+- **Instant feedback**
 
 ## Requirements
 
@@ -23,7 +19,15 @@ Developed during the Fullstack course at [Academia do Programador](https://www.a
 ## Compiling and running
 
 1. Clone the repo and download the source code.
+```
+git clone https://github.com/kyonav/XDiAMOND
+```
+
 2. Open the terminal and navigate to the project folder.
+```
+cd ./XDiAMOND
+```
+
 3. Use the command below to restore the project dependencies.
 
 ```
@@ -36,13 +40,7 @@ dotnet restore
 dotnet build --configuration Release
 ```
 
-5. Execute the project compiling in real time.
-
-```
-dotnet run --project project_name
-```
-
-6. To run the compiled executable; cd into `./path/to/project` on your terminal and type:
+5. To run the compiled executable; cd into`./bin/release/net9.0/` on your terminal and type:
 
 > Windows
 ```
@@ -55,3 +53,7 @@ dotnet run --project project_name
 ```
 
 *Or just run graphically by double clicking it on your file manager.*
+
+## About the Project
+
+Developed during the Fullstack course at [Academia do Programador](https://www.academiadoprogramador.net) 2025
