@@ -4,12 +4,11 @@ namespace XDiAMOND;
 
 class RequestUserInput 
 {
+    public static string? userInputString;
 
-    public static string UserInput()
+    public static void UserInput()
     {
-        string userInput = Console.ReadLine()!;        
-
-        return userInput;
+        userInputString = Console.ReadLine()!;        
     }
 
 }
