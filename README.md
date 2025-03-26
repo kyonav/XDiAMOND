@@ -40,7 +40,7 @@ dotnet restore
 dotnet build --configuration Release
 ```
 
-5. To run the compiled executable; cd into`./bin/release/net9.0/` on your terminal and type:
+5. To run the compiled executable; cd into`./bin/Release/net9.0/` on your terminal and type:
 
 > Windows
 ```
