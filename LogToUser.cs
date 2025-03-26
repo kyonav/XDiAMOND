@@ -2,6 +2,13 @@ namespace XDiAMOND;
 
 class LogToUser
 {
+
+    public static void TypeANumber()
+    {
+        Console.WriteLine("Type an odd integer number!");
+        Console.Write("> ");
+    }
+
     public static void InvalidInputDetected()
     {
         Console.Clear();
@@ -23,10 +30,18 @@ class LogToUser
         Console.WriteLine($"The number {ConvertInput.userInputInt} is even. Try again with a odd number.");
     }
 
-    public static void DoYouWannaContinue()
+    public static void ContinueOrNot()
     {
         Console.WriteLine();
-        Console.WriteLine("Do you wish to redraw the triangle? Y/N");
+        Console.WriteLine("Do you wanna redraw the triangle? (y/*)");
+        Console.Write("> ");
 
+    }
+
+    public static void QuittingProgram()
+    {
+        Console.Clear();
+
+        Console.WriteLine("User chose not to continue. Quitting program...");
     }
 }
